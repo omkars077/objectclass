@@ -2,22 +2,27 @@ package my_package;
 
 public class NewObject {
 
-    String brand="Dell";
-    double price=62000.5;
-    int ram=4;
-    int harddrive=256;
+    String brand;
+    int ram;
+    int battery;
+    double price;
 
+    public NewObject(String brand, int ram, int battery, double price) {
+        this.brand = brand;
+        this.ram = ram;
+        this.battery = battery;
+        this.price = price;
+    }
     public static void main(String[] args){
-        NewObject data= new NewObject();
-        System.out.println(data.brand);
-        System.out.println("Updated price of this laptop is : "+data.price+" rs ");
-        System.out.println("This laptop has : "+data.ram+" gb ");
-        System.out.println(data.harddrive);
-
-        NewObject obj= new NewObject();
+        NewObject obj= new NewObject("Redmi",4,5000,8000);
         System.out.println(obj.brand);
+        System.out.println(obj.battery);
         System.out.println(obj.price);
         System.out.println(obj.ram);
-        System.out.println(obj.harddrive);
+
+        NewObject obj1= new NewObject("Samsung",2,2500,12000.5);
+        System.out.println("This mobile name is : "+obj.brand+" and price is "+" : "+obj.price+" rs ");
+        System.out.println(obj.ram);
+        System.out.println("This mobile battery is : "+obj.battery+"mah");
     }
 }
